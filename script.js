@@ -16,4 +16,11 @@ document.getElementById('dosageForm').addEventListener('submit', function(event)
 
     // Display the result
     document.getElementById('result').textContent = `Total Dosage: ${totalDosage.toFixed(2)} mg`;
+
+    // Optional: Calculate number of tablets if needed
+    const dosagePerTablet = 50; // Assuming each tablet contains 50 mg
+    const numberOfTablets = totalDosage / dosagePerTablet;
+
+    // Display the number of tablets
+    document.getElementById('result').innerHTML += `<br>Number of Tablets: ${numberOfTablets.toFixed(2)}`;
 });
