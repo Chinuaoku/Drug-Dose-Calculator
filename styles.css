@@ -67,7 +67,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('https://github.com/Chinuaoku/Drug-Dosage-Calculator/blob/main/puppy.jpg'); /* Replace with your image URL */
+    background-image: url('https://github.com/Chinuaoku/Drug-Dosage-Calculator/puppy.jpg'); /* Replace with your image URL */
     background-size: cover;
     background-position: center;
 }
