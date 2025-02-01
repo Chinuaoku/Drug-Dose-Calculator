@@ -12,7 +12,7 @@
     <form id="doseCalculatorForm">
       <!-- Drug Type Selection -->
       <label for="drugType">Select Drug Type:</label>
-      <select id="drugType" name="drugType" required>
+      <select id="drugType" name="drugType" required onchange="updateConcentrationType()">
         <option value="" disabled selected>Select Drug Type</option>
         <option value="tablet">Tablet</option>
         <option value="injection">Injection</option>
@@ -22,6 +22,7 @@
       <label for="concentrationType">Select Concentration Type:</label>
       <select id="concentrationType" name="concentrationType" required>
         <option value="" disabled selected>Select Concentration Type</option>
+        <option value="mg">mg (for Tablets)</option>
         <option value="mg/mL">mg/mL</option>
         <option value="µg/mL">µg/mL</option>
         <option value="IU/mL">IU/mL</option>
