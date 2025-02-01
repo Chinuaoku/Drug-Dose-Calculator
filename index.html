@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drug Dosage Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drug Dose Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Drug Dose Calculator</h1>
-        <form id="dosageForm">
-            <!-- Patient Weight -->
-            <label for="weight">Patient Weight (kg):</label>
-            <input type="number" step="any" id="weight" required>
+  <div class="container">
+    <h1>Drug Dose Calculator</h1>
+    <form id="doseCalculatorForm">
+      <!-- Drug Type Selection -->
+      <label for="drugType">Select Drug Type:</label>
+      <select id="drugType" name="drugType" required>
+        <option value="" disabled selected>Select Drug Type</option>
+        <option value="tablet">Tablet</option>
+        <option value="injection">Injection</option>
+      </select>
 
-            <!-- Prescribed Dose -->
-            <label for="dose">Prescribed Dose (mg/kg):</label>
-            <input type="number" step="any" id="dose" required>
+      <!-- Concentration Type Selection -->
+      <label for="concentrationType">Select Concentration Type:</label>
+      <select id="concentrationType" name="concentrationType" required>
+        <option value="" disabled selected>Select Concentration Type</option>
+        <option value="mg/mL">mg/mL</option>
+        <option value="µg/mL">µg/mL</option>
+        <option value="IU/mL">IU/mL</option>
+        <option value="% w/v">% w/v</option>
+        <option value="U/mL">U/mL</option>
+        <option value="Normality">Normality (N)</option>
+        <option value="mOsm/L">mOsm/L</option>
+      </select>
 
-            <!-- Mode of Administration -->
-            <label for="mode">Mode of Administration:</label>
-            <select id="mode" required>
-                <option value="injection">Injection</option>
-                <option value="tablet">Tablet</option>
-            </select>
+      <!-- Concentration Value Input -->
+      <label for="concentrationValue">Enter Concentration Value:</label>
+      <input type="number" id="concentrationValue" name="concentrationValue" step="any" required placeholder="e.g., 10">
 
-            <!-- Concentration Type -->
-            <label for="concentrationType">Concentration Type:</label>
-            <select id="concentrationType" required>
-                <option value="mg/mL">mg/mL</option>
-                <option value="IU/mL">IU/mL</option>
-                <option value="% w/v">% w/v</option>
-                <option value="1:X Ratio">1:X Ratio</option>
-                <option value="Molar (M)">Molar (M)</option>
-                <option value="Normality (N)">Normality (N)</option>
-                <option value="Osmolarity (mOsm/L)">Osmolarity (mOsm/L)</option>
-                <option value="PPM">PPM</option>
-                <option value="PPB">PPB</option>
-            </select>
+      <!-- Required Dosage Input -->
+      <label for="requiredDosage">Enter Required Dosage:</label>
+      <input type="number" id="requiredDosage" name="requiredDosage" step="any" required placeholder="e.g., 50">
 
-            <!-- Concentration Value -->
-            <label for="concentrationValue">Concentration Value:</label>
-            <input type="number" step="any" id="concentrationValue" required>
+      <!-- Patient Weight Input -->
+      <label for="patientWeight">Enter Patient Weight (kg):</label>
+      <input type="number" id="patientWeight" name="patientWeight" step="any" required placeholder="e.g., 70">
 
-            <!-- Tablet-Specific Fields -->
-            <div id="tabletFields" style="display: none;">
-                <label for="tabletConcentration">Tablet Concentration (mg/tablet):</label>
-                <input type="number" step="any" id="tabletConcentration" required>
-            </div>
+      <!-- Calculate Button -->
+      <button type="button" onclick="calculateDose()">Calculate Dose</button>
 
-            <button type="submit">Calculate Dosage</button>
-        </form>
-        <div id="result"></div>
-    </div>
-    <script src="script.js"></script>
+      <!-- Result Display -->
+      <div id="result"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
