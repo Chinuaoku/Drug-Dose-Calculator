@@ -1,62 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input {
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#result {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #333;
-}
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -67,14 +9,101 @@ body {
     background-image: url('https://chinuaoku.github.io/Drug-Dosage-Calculator/puppy.jpeg'); /* Replace with your image URL */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* Container Styling */
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white with better opacity */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ensures it doesn't stretch too wide on large screens */
+    text-align: center;
 }
 
-/* Rest of the CSS remains the same */
+/* Title Styling */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+    color: #555;
+}
+
+/* Input Field Styling */
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Display Styling */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, select, button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
