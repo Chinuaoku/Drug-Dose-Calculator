@@ -53,5 +53,13 @@
   </div>
 
   <script src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <script type="module">
+	        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	        createChat({
+		              webhookUrl: 'https://afiaprimelab.app.n8n.cloud/webhook/f38e5bbc-e34a-4ff9-bcc1-4bdc24486642/chat'
+	        });
+</script>
 </body>
 </html>
