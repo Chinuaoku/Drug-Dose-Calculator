@@ -94,3 +94,12 @@ button:hover {
             height: 100%;
             border: none;
         }
+ /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .chat-container {
+                width: 90vw;
+                height: 75vh;
+                right: 5vw;
+                bottom: 60px;
+            }
+        }
