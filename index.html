@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Embed</title>
   <title>Drug Dose Calculator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -52,6 +53,12 @@
     </form>
   </div>
 
-  <iframe src="https://app.vectorshift.ai/chatbots/embedded/67b85efcb3c1594e116bf00b?openChatbot=true" width="350px" height="450px" style="border: none; position: fixed; bottom: 0; right: 0; margin: 10px;" allow="clipboard-read; clipboard-write; microphone"/>
+ <!-- Chat Icon Button -->
+    <button class="chat-button" onclick="toggleChat()">💬</button>
+
+    <!-- Chat Container -->
+    <div class="chat-container" id="chatContainer">
+        <iframe src="https://app.vectorshift.ai/chatbots/embedded/67b85efcb3c1594e116bf00b?openChatbot=true"></iframe>
+    </div>
 </body>
 </html>
