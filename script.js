@@ -129,3 +129,7 @@ function calculateDose() {
       return;
   }
 }
+function toggleChat() {
+            var chatContainer = document.getElementById("chatContainer");
+            chatContainer.style.display = (chatContainer.style.display === "none" || chatContainer.style.display === "") ? "block" : "none";
+        }
